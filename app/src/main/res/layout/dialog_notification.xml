@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="notification"
+            type="com.mallonline.models.Notification" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notification_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/notification_text_margins"
+            android:text="@{notification.title}"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/notification_dialog_image"
+            android:layout_gravity="clip_horizontal"
+            android:padding="10dp">
+
+            <ProgressBar
+                android:id="@+id/image_progress"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/notification_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/notification_dialog_image"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <com.mallonline.custom.CustomScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:maxHeight="@dimen/scrollview_maxheight">
+
+            <TextView
+                android:id="@+id/notification_message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/notification_text_margins"
+                android:layout_marginLeft="@dimen/notification_text_margins"
+                android:layout_marginRight="@dimen/notification_text_margins"
+                android:layout_marginTop="5dp"
+                android:text="@{notification.message}"
+                android:textColor="@color/primary_txt_color" />
+        </com.mallonline.custom.CustomScrollView>
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:padding="12dp"
+            android:text="@string/cancel"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</layout>

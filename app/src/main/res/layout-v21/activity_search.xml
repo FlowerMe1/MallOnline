@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/scrim" />
+
+        <FrameLayout
+            android:id="@+id/search_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:elevation="@dimen/z_app_bar"
+            android:outlineProvider="bounds">
+
+            <View
+                android:id="@+id/search_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:background="@color/primary_color" />
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_view"
+                style="@style/custom_search_view_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="@dimen/padding_normal"
+                android:alpha="0"
+                android:iconifiedByDefault="false" />
+
+            <!-- wrapping layout needed for the touch ripple -->
+            <FrameLayout
+                android:id="@+id/searchback_container"
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingLeft="4dp">
+
+                <ImageButton
+                    android:id="@+id/searchback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:gravity="start|center_vertical"
+                    android:onClick="onBackButtonClicked"
+                    android:src="@drawable/ic_search_24dp" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/results_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/z_app_bar">
+
+            <RelativeLayout
+                android:id="@+id/layout_spinner_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:drawSelectorOnTop="true"
+                    android:popupBackground="@drawable/popupmenu_bg"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/loading_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateTint="?android:colorAccent"
+                android:indeterminateTintMode="src_in"
+                android:paddingBottom="@dimen/spacing_huge"
+                android:paddingTop="@dimen/spacing_huge"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/stub_no_search_results"
+                layout="@layout/no_search_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/layout_products"
+                layout="@layout/activity_home_content"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </FrameLayout>
+</layout>

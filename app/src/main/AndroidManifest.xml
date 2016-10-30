@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mallonline">
+
+    <meta-data
+        android:name="AA_DB_NAME"
+        android:value="shopping_db.db" />
+    <meta-data
+        android:name="AA_DB_VERSION"
+        android:value="1" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.mallonline.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.shopping.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.mallonline.data.ShoppingApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.mallonline.ui.SplashActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mallonline.ui.LoginActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.mallonline.ui.SignupActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="com.mallonline.ui.HomeActivity" />
+        <activity
+            android:name="com.mallonline.ui.ProductDetailsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.mallonline.ui.CartOrdersActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.mallonline.ui.OrderUserDetailsActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <receiver
+            android:name="com.mallonline.GcmBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.shopping" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.mallonline.GcmIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.mallonline.ui.TodayNotificationsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.mallonline.ui.IntroActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/intro_style" />
+        <activity
+            android:name="com.mallonline.ui.SearchActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/search_theme"></activity>
+    </application>
+
+</manifest>

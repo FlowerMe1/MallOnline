@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="order"
+            type="com.mallonline.models.OrderUserDetails" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/left_right_margins"
+                android:paddingStart="@dimen/left_right_margins">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_full_name"
+                    style="@style/TextInplutLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_text_input_bottom_margin"
+                    android:layout_marginTop="@dimen/login_top_margin"
+                    app:errorTextAppearance="@style/TextAppearence.App.ErrorTextInputLayout"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edit_text_full_name"
+                        style="@style/AppTheme.EditText1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/full_name"
+                        android:text="@{order.fullName}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_phone"
+                    style="@style/TextInplutLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_text_input_bottom_margin"
+                    app:errorTextAppearance="@style/TextAppearence.App.ErrorTextInputLayout"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edit_text_phone"
+                        style="@style/AppTheme.EditText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        android:text="@{order.phone}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_alternative_phone"
+                    style="@style/TextInplutLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_text_input_bottom_margin"
+                    app:errorTextAppearance="@style/TextAppearence.App.ErrorTextInputLayout"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edit_text_alternative_phone"
+                        style="@style/AppTheme.EditText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/alternative_phone"
+                        android:inputType="phone"
+                        android:text="@{order.alternativePhone}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_text_input_bottom_margin">
+
+                    <Spinner
+                        android:id="@+id/spinner_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#6e000000"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="top"
+                        android:popupBackground="@drawable/popupmenu_bg"
+                        android:textColor="@color/primary_txt_color" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_alignBottom="@id/spinner_country"
+                        android:layout_alignLeft="@id/spinner_country"
+                        android:layout_alignRight="@id/spinner_country"
+                        android:background="#6e000000" />
+                </RelativeLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_address"
+                    style="@style/TextInplutLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_text_input_bottom_margin"
+                    app:errorTextAppearance="@style/TextAppearence.App.ErrorTextInputLayout"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edit_text_address"
+                        style="@style/AppTheme.EditText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/full_address"
+                        android:text="@{order.fullAddress}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/button_order_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/custom_btn"
+                    android:onClick="onOrderNowButtonClicked"
+                    android:text="@string/submit_order"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

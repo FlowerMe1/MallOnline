@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_gravity="fill_horizontal"
+    android:background="@color/primary_color"
+    android:gravity="center_vertical">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/abc_spinner_mtrl_am_alpha"
+        android:drawSelectorOnTop="true"
+        android:gravity="top"
+        android:popupBackground="@drawable/popupmenu_bg"
+        android:textColor="@color/primary_txt_color" />
+
+</RelativeLayout>
+

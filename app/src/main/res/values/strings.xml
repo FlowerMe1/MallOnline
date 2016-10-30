@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Mall Online</string>
+
+    <!--login activity-->
+    <string name="login">Log In</string>
+    <string name="password_hint">Password</string>
+    <string name="email_hint">Email</string>
+    <string name="donot_have_account">Don\'t have an account </string>
+    <string name="navigate_signup">Don\'t have an account </string>
+
+    <string name="invalid_email">Invalid Email Address</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="invalid_phone">Invalid Phone</string>
+    <string name="invalid_password_confirmation">Invalid Password Confirmation</string>
+
+    <!--registration activity-->
+    <string name="username_hint">UserName</string>
+    <string name="repeat_password">Password Confirmation</string>
+    <string name="sign_up">Signup</string>
+    <string name="register_now">register now</string>
+    <string name="phone_hint">Phone</string>
+    <string name="have_account">Have an account </string>
+    <string name="sign_in">Sign in</string>
+
+    <!--common-->
+    <string name="something_wrong">Something Went Wrong</string>
+    <string name="server_error">Please check network connection</string>
+    <string name="please_Wait">Please wait .. </string>
+    <string name="invalid_fields">Invalid Fields</string>
+    <string name="sign_out">Signout</string>
+    <string name="order_now">Order</string>
+    <string name="notifications">Notifications</string>
+
+    <!--api-->
+    <string name="base_url">https://mallonline.herokuapp.com</string>
+
+    <!--New Arrivals-->
+    <string name="no_items">No items to show</string>
+    <string name="new_arrivals">New Arrivals</string>
+
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="remove_from_cart">Remove From Cart</string>
+    <string name="product_details">Product Detail</string>
+    <string name="category_title">Category </string>
+
+    <string name="total_title">Total : </string>
+    <string name="submit_order">Order Now</string>
+    <string name="full_name">FullName</string>
+    <string name="identity">Identity</string>
+    <string name="phone">Phone</string>
+    <string name="alternative_phone">Alternative Phone</string>
+    <string name="full_address">Full Address</string>
+    <string name="orders_submited_successfully">Orders have been requested successfullly</string>
+
+    <string name="cart_orders_title">Orders List</string>
+    <string name="order_user_details">User Data</string>
+
+    <!--order user details-->
+    <string name="invalid_full_name">Invalid Full Name</string>
+    <string name="invalid_identity">Invalid Identity</string>
+    <string name="invalid_alternative_phone">Invalid Alternative Phone</string>
+    <string name="invalid_full_address">Invalid Address</string>
+
+    <string name="login_title">Login</string>
+    <string name="signup_title">Signup</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="today_notifications">Today\'s notifications</string>
+
+    <string name="new_text">New</string>
+
+    <string name="currency_sign"> LE</string>
+
+    <string name="next">Next</string>
+    <string name="intro_title">Select Category</string>
+
+    <string name="path_search">M13.3843083,13.3956843 C11.233862,15.5399983 7.7581039,15.5381046 5.61000013,13.3900003 C3.46000004,11.2399998 3.46000004,7.76000023 5.61000013,5.61000013 C7.76000023,3.46000004 11.2400007,3.46000004 13.3900003,5.61000013 C15.54,7.76000023 15.5400009,11.2400007 13.3900003,13.3900003 C13.388104,13.3918967 13.3862067,13.3937913 13.3843083,13.3956843 C15.1427975,15.1834093 19.6826174,19.798706 19.6826172,19.7987061 L13.3843085,13.3956846 L13.3843083,13.3956843 Z</string>
+
+    <string name="no_search_results">No results for\n“%1$s”</string>
+    <string name="no_network">No network connection available, please check it.</string>
+    <string name="search_hint">Search...</string>
+
+</resources>
